@@ -21,20 +21,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button=(Button) findViewById(R.id.button);
         textView=(TextView)findViewById(R.id.textView);
-        button.setOnClickListener(new OnClickListener() {
+        button2=(Button) findViewById(R.id.button2);
+        button.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v) {
-                if (bool) {
+                if(bool) {
                     textView.setText("Clicao!");
-                    bool = !bool;
-                } else {
+                    bool=!bool;
+                }else{
                     textView.setText("Hello World!");
-                    bool = !bool;
-                   Toast h= Toast.makeText(MainActivity.this,"Hoola",Toast.LENGTH_SHORT);
-                    h.show();
+                    bool=!bool;
                 }
             }
-        });
+         });
 
 
     }
@@ -59,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buton2(View view) {
+        Toast t= Toast.makeText(this,"Cheee",Toast.LENGTH_SHORT);
+        t.show();
     }
 }
