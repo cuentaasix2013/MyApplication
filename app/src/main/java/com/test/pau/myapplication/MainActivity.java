@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private Button  button2;
     private Button button;
     private TextView textView;
     private Boolean bool=true;
