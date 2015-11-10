@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private Button button;
     private TextView textView;
+    private Boolean bool=true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v) {
-                textView.setText("Clicao!");
-
+                if(bool) {
+                    textView.setText("Clicao!");
+                    bool=!bool;
+                }else{
+                    textView.setText("Hello World!");
+                    bool=!bool;
+                }
             }
          });
 
