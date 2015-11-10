@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button  button2;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button=(Button) findViewById(R.id.button);
         textView=(TextView)findViewById(R.id.textView);
+        button2=(Button) findViewById(R.id.button2);
         button.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -56,5 +58,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buton2(View view) {
+        Toast t= Toast.makeText(this,"Cheee",Toast.LENGTH_SHORT);
+        t.show();
     }
 }
